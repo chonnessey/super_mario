@@ -1,7 +1,7 @@
 class Review < ApplicationRecord
   belongs_to :product
-  validates :author, presence: true, uniqeness: {case_sensitive: false}
-  validates :content_body, presence: true, uniqeness: {case_sensitive: false}
+  validates :author, presence: true, uniqueness: {case_sensitive: false}
+  validates :content_body, presence: true, uniqueness: {case_sensitive: false}
 
   before_save(:titleize_author)
 
