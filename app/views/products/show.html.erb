@@ -1,0 +1,20 @@
+<h2><%= @product.name %></h2>
+<h4>Cost: <%= @product.cost%></h4>
+<div class="row">
+  <div class="col-md-6">
+    <% if @product.reviews.any? %>
+      <h3>Reviews</h3>
+      <hr>
+
+      <% @product.reviews.each do |review| %>
+        <ul>
+          <li>
+            <%= link_to review.content_body, product_review_path(@product, review) %> <%= review.author %>
+          </li>
+        </ul>
+      <% end %>
+    <% else %>
+      <p>No reviews have been published for this product!</p>
+    <% end %>
+  </div>
+</div>
