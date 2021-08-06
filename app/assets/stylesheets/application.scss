@@ -18,8 +18,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#edits {
+.panel-body {
   background: linear-gradient(144deg, rgb(247, 173, 247), rgb(217, 247, 217));
+  border-radius: 10px;
+}
+
+.panel-heading {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
 }
 
 body {
@@ -27,6 +34,10 @@ body {
 }
 
 #author {
+  text-decoration: underline;
+}
+
+#product-name {
   text-decoration: underline;
 }
 
