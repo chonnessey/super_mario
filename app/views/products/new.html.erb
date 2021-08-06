@@ -1,11 +1,6 @@
 <h1>New Product</h1>
-<%= form_for @product do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :cost %>
-  <%= f.number_field :cost, step: 1 %>
-  <%= f.label :country_of_origin %>
-  <%= f.text_field :country_of_origin %>
-  <%= f.submit %>
-<% end %>
+
+<%= render "layouts/product_form" %>
+
+<p><%= link_to "Return to products", products_path %></p>
 
