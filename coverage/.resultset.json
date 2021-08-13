@@ -1,6 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/chonnessey/escuela/super_mario/spec/features/integration_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/Users/chonnessey/escuela/super_mario/spec/models/product_spec.rb": {
         "lines": [
           1,
@@ -608,6 +613,6 @@
         ]
       }
     },
-    "timestamp": 1628890709
+    "timestamp": 1628893887
   }
 }
