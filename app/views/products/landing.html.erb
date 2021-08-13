@@ -1,0 +1,14 @@
+<h1>Welcome to Super Mario's Market!</h1>
+<br>
+<br>
+<h4>Below are some of our hottest products that are available to you!</h4>
+<br>
+
+
+<h2>Here are some of our recently added products</h2>
+<% the_most_recent = @products.three_most_recent %>
+  <ul>
+    <% the_most_recent.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>

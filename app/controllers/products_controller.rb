@@ -1,5 +1,11 @@
 class ProductsController < ApplicationController
 
+  def landing
+    @products = Product.all
+    @reviews = Review.all
+    render :landing
+  end
+
   def index
     @products = Product.all
     # @products = @products.sort_by {|product| product.reviews}
