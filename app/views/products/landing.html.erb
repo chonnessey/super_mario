@@ -5,10 +5,18 @@
 <br>
 
 
-<h2>Here are some of our recently added products</h2>
+<h3>Here are some of our recently added products:</h3>
 <% the_most_recent = @products.three_most_recent %>
   <ul>
     <% the_most_recent.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+
+<h3>Wanna keep it local? Browse the products made in 'Merica:</h3>
+<% local = @products.made_in_usa %>
+  <ul>
+    <% local.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
