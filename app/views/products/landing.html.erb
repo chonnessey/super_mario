@@ -22,3 +22,11 @@
       <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
+
+<h3>Here is our most reviewed product:</h3>
+<% most = @products.most_reviewed %>
+  <ul>
+    <% most.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
