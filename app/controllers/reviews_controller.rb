@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
       flash[:notice] = "Review successfully created!"
       redirect_to product_path(@product)
     else
+      flash[:alert] = "Review was not created."
       redirect_to product_path(@product)
     end
   end
@@ -34,6 +35,7 @@ class ReviewsController < ApplicationController
       flash[:notice] = "Review successfully updated!"
       redirect_to product_path(@review.product)
     else
+      flash[:alert] = "Review was not created."
       @product = Product.find(params[:product_id])
       render :edit
     end
