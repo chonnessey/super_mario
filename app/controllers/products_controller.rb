@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
       flash[:notice] = "Product successfully created!"
       redirect_to products_path      
     else
+      flash[:error] = "Product was not created"
       render :new
     end
   end
@@ -44,6 +45,7 @@ class ProductsController < ApplicationController
       flash[:notice] = "Product successfully updated!"
       redirect_to product_path(@product)
     else
+      flash[:error] = "Product was not updated"
       render :edit
     end
   end
