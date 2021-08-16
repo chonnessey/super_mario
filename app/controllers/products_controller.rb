@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-
+  before_action :authorize_admin, only: [:new, :create, :update, :edit, :destroy] 
+  
   def landing
     @products = Product.all
     @reviews = Review.all

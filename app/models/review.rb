@@ -3,6 +3,7 @@ class Review < ApplicationRecord
   validates :author, presence: true
   validates :rating, presence: true, length: { in: 1..5}
   validates :content_body, presence: true, length: { in: 50..250 }
+  validates :product_id, presence: true
 
   before_save(:titleize_author)
 
