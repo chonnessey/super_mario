@@ -23,4 +23,15 @@ describe "the product creating process" do
     expect(page).to have_content 'Product successfully created!'
     expect(page).to have_content "Cheese"
   end
+
+  it "gives an error message when a non admin user tries to add a product" do
+    visit signin_path
+    fill_in "Email", :with => "hello@hello.com"
+    fill_in "Password", :with => "bye"
+    click_on "Sign in Please"
+    visit products_path
+    click_link "Create new product"
+    expect(page).to have_content "You need to be an admin to access this page!"
+  end
+
 end
