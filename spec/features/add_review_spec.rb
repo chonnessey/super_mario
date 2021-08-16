@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "the product creating process" do
+describe "the review creating process" do
 
   before(:each) do
     Product.destroy_all
