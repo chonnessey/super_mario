@@ -33,4 +33,27 @@ describe "the product creating process" do
     click_on "Edit Product Details"
     expect(page).to have_content "You need to be an admin to access this page!"
   end
+
+
+  it "deletes a product when an admin user does so" do
+    visit signin_path
+    fill_in "Email", :with => "admin@admin.com"
+    fill_in "Password", :with => "admin"
+    click_on "Sign in Please"
+    visit products_path
+    click_on ("Cheese")
+    click_on "Delete Product"
+    expect(page).to_not have_content "Queso"
+  end
+
+  it "prints an error message when non admin tries to delete a product" do
+    visit signin_path
+    fill_in "Email", :with => "hello@hello.com"
+    fill_in "Password", :with => "bye"
+    click_on "Sign in Please"
+    visit products_path
+    click_on ("Cheese")
+    click_on "Delete Product"
+    expect(page).to have_content "You need to be an admin to access this page!"
+  end
 end

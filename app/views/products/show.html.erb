@@ -23,7 +23,7 @@
       <h4 class="panel-heading">Edits</h4>
       <div class="panel-body">
         <p><%= link_to "Want to add a Review?", new_product_review_path(@product) %></p>
-        <p><%= link_to "Delete", product_path(@product), :data => {:confirm => "You sure?", :method => "Delete"} %></p>
+        <p><%= link_to "Delete Product", product_path(@product), :data => {:confirm => "You sure?", :method => "Delete"} %></p>
         <p><%= link_to "Edit Product Details", edit_product_path(@product)%>
         <p><%= link_to "View all products", products_path%></p>
         <p><%= link_to "Return to Home Page", root_path%></p>
