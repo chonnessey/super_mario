@@ -25,15 +25,16 @@
 2. Enter new directory `cd directory`
 3. Install dependencies with the `bundle` command.
 4. To set up a server side database run the command `rake db:create` when in the project directory.
-5. To run the Rails local server run the command `rails s` and then navigate to `localhost:3000`.
-6. Create an account by clicking the sign up link on the homepage.
-7. If you would like to give yourself admin access you can do so in the rails console. Run the command `rails c` to enter the console.
-8. Find the user you created and look for the id by running `User.all`.
-9. Once you find your id, save it into a variable ie: `admin = User.find(1)`.
-10. Update your admin attribute to true like this `admin.update({:admin => "true"})`
-11. Finally save your updated admin object with the command `admin.save` and you should be good to go!
-12. To run tests, run the command `rspec` in the project directory.
-13. Fill out the forms and have fun!
+5. Run the command `rake:db:seed` to auto fill products and reviews that will be populated by the _Faker Gem_.
+6. To run the Rails local server run the command `rails s` and then navigate to `localhost:3000`.
+7. Create an account by clicking the sign up link on the homepage.
+8. If you would like to give yourself admin access you can do so in the rails console. Run the command `rails c` to enter the console.
+9. Find the user you created and look for the _id_ by running `User.all`.
+10. Once you find your _id_, save it into a variable ie: `admin = User.find(1)`.
+11. Update your admin attribute to true like this `admin.update({:admin => "true"})`
+12. Finally save your updated admin object with the command `admin.save` and you should be good to go!
+13. To run tests, run the command `rspec` in the project directory.
+14. Fill out the forms, explore and have fun!
 ---
 ### Known Bugs :bug:
 1. No Known Bugs.
