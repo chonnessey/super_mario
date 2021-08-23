@@ -22,7 +22,7 @@
 ---
 ### Installation Instructions :pushpin:
 1. Clone this repo: `https://github.com/chonnessey/super_mario.git`
-2. Enter new directory `cd directory`
+2. Enter new directory `cd super_mario`
 3. Install dependencies with the `bundle` command.
 4. To set up a server side database run the command `rake db:create` when in the project directory.
 5. Run `rake db:migrate` after creating the database.
