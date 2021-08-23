@@ -25,4 +25,16 @@ describe 'The admin access to reviews' do
     expect(page).to have_content "Luna"
   end
 
+  it "updates a review when an admin user does so" do
+    visit signin_path
+    fill_in "Email", :with => "admin@admin.com"
+    fill_in "Password", :with => "admin"
+    click_on "Sign in Please"
+    visit products_path
+    click_on ("Cheese")
+    click_on "This has to be the cheesiest, ooziest, gooiest glob of cheese ever.. and I love it!"
+    click_on "Delete review from product?"
+    expect(page).to have_content "No reviews have been published for this product!"
+  end
+
 end
