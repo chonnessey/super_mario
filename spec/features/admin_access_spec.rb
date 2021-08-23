@@ -37,4 +37,30 @@ describe 'The admin access to reviews' do
     expect(page).to have_content "No reviews have been published for this product!"
   end
 
+  it "prevents a nonadmin user from editing a review" do
+    visit signin_path
+    fill_in "Email", :with => "hello@hello.com"
+    fill_in "Password", :with => "bye"
+    click_on "Sign in Please"
+    visit products_path
+    click_on ("Cheese")
+    click_on "This has to be the cheesiest, ooziest, gooiest glob of cheese ever.. and I love it!"
+    click_on "Edit review"
+    # fill_in "Author", :with => "Luna"
+    # click_on "Update Review"
+    expect(page).to have_content "You need to be an admin to access this page!"
+  end
+
+  it "prevents a nonadmin user from deleting a review" do
+    visit signin_path
+    fill_in "Email", :with => "hello@hello.com"
+    fill_in "Password", :with => "bye"
+    click_on "Sign in Please"
+    visit products_path
+    click_on ("Cheese")
+    click_on "This has to be the cheesiest, ooziest, gooiest glob of cheese ever.. and I love it!"
+    click_on "Delete review from product?"
+    expect(page).to have_content "You need to be an admin to access this page!"
+  end
+
 end
